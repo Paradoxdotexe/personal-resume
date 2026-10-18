@@ -1,11 +1,31 @@
 const WorkExperience = [
     {
-        title: 'Frontend Engineer',
-        subtitle: 'Jellyfish',
-        tag: 'Jun 2022 - present',
-        content: `<ul>
-            <li>Strategizing new products for strategic initatives, designing them in Figma, and developing them with Django, React, and AWS</li>
-        </ul>`
+        title: 'Jellyfish',
+        subtitle: 'Boston, MA',
+        tag: 'Jun 2022 — present',
+        roles: [
+            {
+                title: 'Senior Software Engineer',
+                tag: 'Jul 2024 — present',
+                content: `<ul>
+                    <li>Spearheading front-end development of new, strategic products</li>
+                </ul>`
+            },
+            {
+                title: 'Software Engineer II',
+                tag: 'Jun 2023 — Jun 2024',
+                content: `<ul>
+                    <li>Expanded the capability of the core Jellyfish product and evolved foundational front-end patterns</li>
+                </ul>`
+            },
+            {
+                title: 'Software Engineer',
+                tag: 'Jun 2022 — May 2023',
+                content: `<ul>
+                    <li>Experimented with greenfield technology for potential product expansion</li>
+                </ul>`
+            }
+        ]
     },
     {
         title: 'Angular Web Developer',

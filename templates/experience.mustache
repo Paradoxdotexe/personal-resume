@@ -5,7 +5,22 @@
         <div class="experience__subtitle">{{ subtitle }}</div>
         <div class="experience__tag">{{ tag }}</div>
     </div>
+    {{#roles.length}}
+    <div class="experience__roles">
+        {{#roles}}
+        <div class="experience__role">
+            <div class="experience__role-header">
+                <div class="experience__role-title"><span></span>{{ title }}</div>
+                <div class="experience__role-tag">{{ tag }}</div>
+            </div>
+            <div class="experience__content">{{{ content }}}</div>
+        </div>
+        {{/roles}}
+    </div>
+    {{/roles.length}}
+    {{^roles.length}}
     <div class="experience__content">{{{ content }}}</div>
+    {{/roles.length}}
 </div>
 {{/data}}
 
@@ -54,5 +69,59 @@
 
     .experience .experience__content {
         font-size: var(--font-size-sm);
+    }
+
+    /* Roles nested under a single company, connected by a small timeline */
+    .experience .experience__roles {
+        --role-gap: 0.1in;
+        --role-dot-size: 8px;
+        --role-dot-top: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--role-gap);
+    }
+
+    .experience .experience__role {
+        position: relative;
+        padding-left: 0.2in;
+    }
+
+    .experience .experience__role:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: calc(var(--role-dot-size) / 2 - 1px);
+        top: calc(var(--role-dot-top) + var(--role-dot-size) + 3px);
+        bottom: calc(-1 * var(--role-gap) + var(--role-dot-top) - 3px);
+        width: 2px;
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+    .experience .experience__role-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 0.03in;
+    }
+
+    .experience .experience__role-title {
+        font-size: var(--font-size-md);
+        font-weight: bold;
+    }
+
+    .experience .experience__role-title span {
+        position: absolute;
+        left: 0;
+        top: var(--role-dot-top);
+        width: var(--role-dot-size);
+        height: var(--role-dot-size);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .experience .experience__role-tag {
+        font-size: var(--font-size-xs);
+        font-style: italic;
+        color: rgba(0, 0, 0, 0.6);
+        white-space: nowrap;
     }
 </style>
