@@ -19,10 +19,10 @@
         <script>
             fetch('templates/experience.mustache').then(response => response.text()).then(experienceTemplate => {
                 fetch('templates/main-section.mustache').then(response => response.text()).then(sectionTemplate => {
-                    renderTemplate(sectionTemplate, 'work-experience-section', { id: 'work-experience',  title: 'Work History', icon: 'work' });
+                    renderTemplate(sectionTemplate, 'work-experience-section', { id: 'work-experience',  title: 'Work History', icon: 'briefcase-solid-full' });
                     renderTemplate(experienceTemplate, 'work-experience', WorkExperience);
 
-                    renderTemplate(sectionTemplate, 'academic-experience-section', { id: 'academic-experience',  title: 'Education', icon: 'school' });
+                    renderTemplate(sectionTemplate, 'academic-experience-section', { id: 'academic-experience',  title: 'Education', icon: 'graduation-cap-solid-full' });
                     renderTemplate(experienceTemplate, 'academic-experience', AcademicExperience);
                 });
             });
