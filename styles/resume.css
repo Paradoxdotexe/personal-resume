@@ -29,7 +29,7 @@
 .header__underscore {
   width: 1in;
   height: 0.05in;
-  background: var(--accent-secondary);
+  background: var(--accent-primary);
 }
 
 .header__bio {
