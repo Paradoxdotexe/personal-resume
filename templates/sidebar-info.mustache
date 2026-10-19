@@ -13,6 +13,11 @@
         flex-direction: column;
     }
 
+    /* Items only fill some fields; drop the empty ones so they take no space */
+    .sidebar__info :empty {
+        display: none;
+    }
+
     .sidebar__info strong {
         margin-bottom: 0.05in;
         font-weight: 500;
@@ -32,7 +37,7 @@
     }
 
     /* Only tuck the italic line under the title when no subtitle sits between them */
-    .sidebar__info div:not(:empty) ~ i {
+    .sidebar__info div:not(:empty) ~ i:not(:empty) {
         margin-top: 0.03in;
     }
 </style>

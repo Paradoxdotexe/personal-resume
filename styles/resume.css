@@ -74,10 +74,24 @@
 
 .sidebar .sidebar__header {
   margin-bottom: 0.025in;
+  display: flex;
+  align-items: center;
+  gap: 0.1in;
+}
+
+/* Icons are masks so they take the sidebar's text color */
+.sidebar .sidebar__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background: currentColor;
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
 }
 
 .sidebar .sidebar__underscore {
-  width: 1in;
+  width: 100%;
   height: 0.025in;
   background: rgba(255, 255, 255, 0.5);
   margin-bottom: 0.15in;
@@ -87,4 +101,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.2in;
+}
+
+.sidebar .sidebar__list--compact {
+  gap: 0.06in;
 }

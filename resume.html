@@ -15,6 +15,7 @@
         <script src="data/academic_experience.js"></script>
         <script src="data/details.js"></script>
         <script src="data/skills.js"></script>
+        <script src="data/awards.js"></script>
 
         <script>
             fetch('templates/experience.mustache').then(response => response.text()).then(experienceTemplate => {
@@ -30,6 +31,7 @@
             fetch('templates/sidebar-info.mustache').then(response => response.text()).then(template => {
                 renderTemplate(template, 'details', Details);
                 renderTemplate(template, 'skills', Skills);
+                renderTemplate(template, 'awards', Awards);
             });
         </script>
     </head>
@@ -56,15 +58,21 @@
 
             <div class="sidebar">
                 <div class="sidebar__section">
-                    <div class="sidebar__header title">Info</div>
+                    <div class="sidebar__header title"><span class="sidebar__icon" style="mask-image: url(./icons/address-card-solid-full.svg)"></span>Info</div>
                     <div class="sidebar__underscore"></div>
-                    <div id="details" class="sidebar__list"></div>
+                    <div id="details" class="sidebar__list sidebar__list--compact"></div>
                 </div>
 
                 <div class="sidebar__section">
-                    <div class="sidebar__header title">Skills</div>
+                    <div class="sidebar__header title"><span class="sidebar__icon" style="mask-image: url(./icons/screwdriver-wrench-solid-full.svg)"></span>Skills</div>
                     <div class="sidebar__underscore"></div>
                     <div id="skills" class="sidebar__list"></div>
+                </div>
+
+                <div class="sidebar__section">
+                    <div class="sidebar__header title"><span class="sidebar__icon" style="mask-image: url(./icons/trophy-solid-full.svg)"></span>Awards</div>
+                    <div class="sidebar__underscore"></div>
+                    <div id="awards" class="sidebar__list"></div>
                 </div>
             </div>
         </div>
