@@ -1,50 +1,33 @@
 {{#data}}
 <div class="main__section">
-    <div class="section__left">
+    <div class="section__header">
         <img src="./icons/{{data.icon}}.svg">
-        <div class="section__line"></div>
-    </div>
-    <div class="section__right">
         <div class="section__title title">{{data.title}}</div>
-        <div id="{{data.id}}" class="section__experiences"></div>
     </div>
+    <div id="{{data.id}}" class="section__experiences"></div>
 </div>
 {{/data}}
 
 <style>
     .main__section {
         width: 100%;
-        display: flex;
         --icon-size: 24px;
     }
 
-    .main__section .section__left {
-        margin-right: 0.1in;
+    .main__section .section__header {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        gap: 0.1in;
+        margin-bottom: 0.15in;
     }
 
-    .main__section .section__left img {
-        margin-bottom: 0.2in;
+    .main__section .section__header img {
         width: var(--icon-size);
         height: var(--icon-size);
-        min-height: var(--icon-size);
-    }
-
-    .main__section .section__line {
-        height: 100%;
-        width: 2px;
-        background: rgba(0, 0, 0, 0.15);
-    }
-
-    .main__section .section__right {
-        width: 100%;
     }
 
     .main__section .section__title {
         line-height: var(--icon-size);
-        margin-bottom: 0.15in;
     }
 
     .main__section .section__experiences {

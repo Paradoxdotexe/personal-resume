@@ -1,6 +1,7 @@
 const WorkExperience = [
     {
         title: 'Jellyfish',
+        logo: './images/jellyfish.jpg',
         subtitle: 'Boston, MA',
         tag: 'Jun 2022 — present',
         roles: [
@@ -30,6 +31,7 @@ const WorkExperience = [
     {
         title: 'Co-Founder & CTO',
         subtitle: 'Pallyt Technologies',
+        logo: './images/pallyt.jpg',
         tag: 'Mar 2021 — Jun 2022',
         content: `<ul>
             <li>Lead a 5-person dev team in the development of multiple Vue web apps with a serverless AWS backend infrastructure</li>
