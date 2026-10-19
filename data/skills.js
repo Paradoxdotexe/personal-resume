@@ -6,7 +6,7 @@ const Skills = [
     },
     {
         title: 'Product Design',
-        subtitle: 'Figma, Adobe XD, Photoshop',
+        subtitle: 'Figma, Photoshop',
         subtitleItalic: '6 years'
     },
     {
