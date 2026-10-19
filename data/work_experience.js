@@ -46,13 +46,13 @@ const WorkExperience = [
             <li>Overhauled a mobile web application to refine user experience and enhance functionality for 100 monthly users</li>
         </ul>`
     },
-    {
-        title: 'Network Automation Intern',
-        subtitle: 'State Street Corporation',
-        tag: 'Jun 2019 — Aug 2019',
-        content: `<ul>
-            <li>Developed and deployed a web portal to automate employee onboarding through multiple REST API services</li>
-            <li>Initiated a department-wide switch from bash scripts to Python for increased productivity</li>
-        </ul>`
-    }
+    // {
+    //     title: 'Network Automation Intern',
+    //     subtitle: 'State Street Corporation',
+    //     tag: 'Jun 2019 — Aug 2019',
+    //     content: `<ul>
+    //         <li>Developed and deployed a web portal to automate employee onboarding through multiple REST API services</li>
+    //         <li>Initiated a department-wide switch from bash scripts to Python for increased productivity</li>
+    //     </ul>`
+    // }
 ];
