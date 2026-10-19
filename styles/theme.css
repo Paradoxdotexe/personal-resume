@@ -1,6 +1,5 @@
 :root {
-    --font-family-primary: 'Roboto', sans-serif;
-    --font-family-secondary: 'Roboto Condensed', sans-serif;
+    --font-family-primary: 'Barlow', sans-serif;
 
     --color-primary: #000;
     --color-inverse-primary: #ffffff;
