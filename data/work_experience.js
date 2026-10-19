@@ -41,6 +41,7 @@ const WorkExperience = [
     },
     {
         title: 'Angular Web Developer',
+        logo: './images/biocsbridge.png',
         subtitle: 'Bio-CS Bridge Project',
         tag: 'Aug 2019 — May 2022',
         content: `<ul>
