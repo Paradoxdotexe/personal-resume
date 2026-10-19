@@ -18,6 +18,11 @@
     --padding-lg: 0.7in;
 }
 
+@page {
+    size: 8.5in 11in;
+    margin: 0;
+}
+
 body {
     width: 8.5in;
     height: 11in;

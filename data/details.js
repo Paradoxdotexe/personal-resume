@@ -9,7 +9,7 @@ const Details = [
     },
     {
         title: 'Email',
-        href: 'nathan@thenjk.com',
+        href: 'mailto:nathan@thenjk.com',
         link: 'nathan@thenjk.com'
     },
     {

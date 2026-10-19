@@ -3,19 +3,24 @@
     {{#logo}}<img class="experience__logo" src="{{ . }}" alt="">{{/logo}}
     {{^logo}}<div class="experience__logo experience__logo--placeholder"><img src="./icons/briefcase-solid-full.svg" alt=""></div>{{/logo}}
     <div class="experience__header">
-        <div class="experience__title">{{ title }}</div>
-        <div class="experience__subtitle">{{ subtitle }}</div>
+        <div>
+            <div class="experience__title">{{ title }}</div>
+            <div class="experience__subtitle">{{ subtitle }}</div>
+        </div>
         <div class="experience__tag">{{ tag }}</div>
     </div>
     {{#roles.length}}
     <div class="experience__roles">
         {{#roles}}
         <div class="experience__role">
-            <div class="experience__role-header">
-                <div class="experience__role-title"><span></span>{{ title }}</div>
-                <div class="experience__role-tag">{{ tag }}</div>
+            <div class="experience__role-rail"><span></span><span></span></div>
+            <div class="experience__role-body">
+                <div class="experience__role-header">
+                    <div class="experience__role-title">{{ title }}</div>
+                    <div class="experience__role-tag">{{ tag }}</div>
+                </div>
+                <div class="experience__content">{{{ content }}}</div>
             </div>
-            <div class="experience__content">{{{ content }}}</div>
         </div>
         {{/roles}}
     </div>
@@ -27,6 +32,10 @@
 {{/data}}
 
 <style>
+    /*
+     * Layout avoids position/z-index: positioned elements paint in a later pass,
+     * which reorders the PDF text layer and scrambles it for resume parsers.
+     */
     /* Logo in the left column; header, content, and roles in the right */
     .experience {
         --logo-size: 0.45in;
@@ -62,7 +71,10 @@
     }
 
     .experience .experience__header {
-        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 0.1in;
         margin-bottom: 0.1in;
     }
 
@@ -78,9 +90,8 @@
     }
 
     .experience .experience__header .experience__tag {
-        position: absolute;
-        top: 0;
-        right: 0;
+        margin-top: 0.03in;
+        white-space: nowrap;
         background: var(--accent-primary);
         color: var(--color-inverse-primary);
         font-size: var(--font-size-xs);
@@ -93,29 +104,54 @@
         font-size: var(--font-size-sm);
     }
 
-    /* Roles nested under a single company, connected by a small timeline */
+    /* Roles nested under a single company, connected by a timeline rail under the logo */
     .experience .experience__roles {
         --role-gap: 0.1in;
-        --role-dot-left: calc(-1 * (var(--logo-gap) + var(--logo-size) / 2));
         --role-dot-size: 8px;
-        --role-dot-top: 5px;
         display: flex;
         flex-direction: column;
-        gap: var(--role-gap);
     }
 
     .experience .experience__role {
-        position: relative;
+        display: flex;
     }
 
-    .experience .experience__role:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        left: calc(var(--role-dot-left) - 1px);
-        top: calc(var(--role-dot-top) + var(--role-dot-size) + 3px);
-        bottom: calc(-1 * var(--role-gap) + var(--role-dot-top) - 3px);
+    .experience .experience__role:not(:last-child) .experience__role-body {
+        padding-bottom: var(--role-gap);
+    }
+
+    .experience .experience__role-rail {
+        flex-shrink: 0;
+        width: var(--logo-size);
+        margin-left: calc(-1 * (var(--logo-size) + var(--logo-gap)));
+        margin-right: var(--logo-gap);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience .experience__role-rail span:first-child {
+        flex-shrink: 0;
+        margin-top: 5px;
+        width: var(--role-dot-size);
+        height: var(--role-dot-size);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .experience .experience__role-rail span:last-child {
+        flex: 1;
         width: 2px;
+        margin-top: 3px;
         background: rgba(0, 0, 0, 0.15);
+    }
+
+    .experience .experience__role:last-child .experience__role-rail span:last-child {
+        display: none;
+    }
+
+    .experience .experience__role-body {
+        flex: 1;
     }
 
     .experience .experience__role-header {
@@ -128,16 +164,6 @@
     .experience .experience__role-title {
         font-size: var(--font-size-md);
         font-weight: 600;
-    }
-
-    .experience .experience__role-title span {
-        position: absolute;
-        left: calc(var(--role-dot-left) - var(--role-dot-size) / 2);
-        top: var(--role-dot-top);
-        width: var(--role-dot-size);
-        height: var(--role-dot-size);
-        border-radius: 50%;
-        background: rgba(0, 0, 0, 0.3);
     }
 
     .experience .experience__role-tag {
