@@ -12,7 +12,6 @@
         <script src="https://unpkg.com/mustache@latest"></script>
         <script src="scripts/helpers.js"></script>
         <script src="data/work_experience.js"></script>
-        <script src="data/project_experience.js"></script>
         <script src="data/academic_experience.js"></script>
         <script src="data/details.js"></script>
         <script src="data/skills.js"></script>
@@ -22,9 +21,6 @@
                 fetch('templates/main-section.mustache').then(response => response.text()).then(sectionTemplate => {
                     renderTemplate(sectionTemplate, 'work-experience-section', { id: 'work-experience',  title: 'Work History', icon: 'work' });
                     renderTemplate(experienceTemplate, 'work-experience', WorkExperience);
-
-                    renderTemplate(sectionTemplate, 'project-experience-section', { id: 'project-experience',  title: 'Projects', icon: 'projects' });
-                    renderTemplate(experienceTemplate, 'project-experience', ProjectExperience);
 
                     renderTemplate(sectionTemplate, 'academic-experience-section', { id: 'academic-experience',  title: 'Education', icon: 'school' });
                     renderTemplate(experienceTemplate, 'academic-experience', AcademicExperience);
@@ -55,7 +51,6 @@
         <div class="resume__framework">
             <div class="main">
                 <div id="work-experience-section"></div>
-                <div id="project-experience-section"></div>
                 <div id="academic-experience-section"></div>
             </div>
 

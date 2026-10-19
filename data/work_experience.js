@@ -28,6 +28,15 @@ const WorkExperience = [
         ]
     },
     {
+        title: 'Co-Founder & CTO',
+        subtitle: 'Pallyt Technologies',
+        tag: 'Mar 2021 — Jun 2022',
+        content: `<ul>
+            <li>Lead a 5-person dev team in the development of multiple Vue web apps with a serverless AWS backend infrastructure</li>
+            <li>Acted as chief visionary of the Pallyt platform and guided the business in branding, marketing, incorporation, and fundraising</li>
+        </ul>`
+    },
+    {
         title: 'Angular Web Developer',
         subtitle: 'Bio-CS Bridge Project',
         tag: 'Aug 2019 — May 2022',
