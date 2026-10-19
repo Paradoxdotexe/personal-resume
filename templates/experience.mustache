@@ -7,7 +7,7 @@
             <div class="experience__title">{{ title }}</div>
             <div class="experience__subtitle">{{ subtitle }}</div>
         </div>
-        <div class="experience__tag">{{ tag }}</div>
+        {{^roles.length}}<div class="experience__tag">{{ tag }}</div>{{/roles.length}}
     </div>
     {{#roles.length}}
     <div class="experience__roles">
@@ -92,12 +92,8 @@
     .experience .experience__header .experience__tag {
         margin-top: 0.03in;
         white-space: nowrap;
-        background: var(--accent-primary);
-        color: var(--color-inverse-primary);
         font-size: var(--font-size-xs);
-        line-height: 100%;
-        padding: 0.03in 0.1in;
-        border-radius: 16px;
+        color: rgba(0, 0, 0, 0.6);
     }
 
     .experience .experience__content {
@@ -168,7 +164,6 @@
 
     .experience .experience__role-tag {
         font-size: var(--font-size-xs);
-        font-style: italic;
         color: rgba(0, 0, 0, 0.6);
         white-space: nowrap;
     }
