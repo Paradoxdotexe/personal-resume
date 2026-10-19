@@ -30,4 +30,9 @@
         font-size: var(--font-size-sm);
         margin-top: -0.05in;
     }
+
+    /* Only tuck the italic line under the title when no subtitle sits between them */
+    .sidebar__info div:not(:empty) ~ i {
+        margin-top: 0.03in;
+    }
 </style>
