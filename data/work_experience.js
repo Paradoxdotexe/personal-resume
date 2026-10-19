@@ -9,21 +9,22 @@ const WorkExperience = [
                 title: 'Senior Software Engineer',
                 tag: 'Jul 2024 — present',
                 content: `<ul>
-                    <li>Spearheading front-end development of new, strategic products</li>
+                    <li>Spearheaded development of new, strategic products, including DevEx and AI Impact, two of the top lead-generating products</li>
+                    <li>Pioneered a suite of agentic AI workflows that increased issue throughput over 25% across engineering</li>
                 </ul>`
             },
             {
                 title: 'Software Engineer II',
                 tag: 'Jun 2023 — Jun 2024',
                 content: `<ul>
-                    <li>Expanded the capability of the core Jellyfish product and evolved foundational front-end patterns</li>
+                    <li>Expanded the capability of the core Jellyfish product and evolved foundational frontend patterns for better QoL and reusability</li>
                 </ul>`
             },
             {
                 title: 'Software Engineer',
                 tag: 'Jun 2022 — May 2023',
                 content: `<ul>
-                    <li>Experimented with greenfield technology for potential product expansion</li>
+                    <li>Experimented with greenfield technology, co-building a net-new product to market test a PLG motion and real-time connectivity</li>
                 </ul>`
             }
         ]
