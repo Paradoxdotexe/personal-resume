@@ -6,12 +6,12 @@ const Skills = [
     },
     {
         title: 'Product Design',
-        subtitle: 'Figma, Photoshop',
+        subtitle: 'Figma, Adobe XD, Photoshop',
         subtitleItalic: '6 years'
     },
     {
         title: 'Backend Development',
-        subtitle: 'Django, Flask, Python, AWS',
+        subtitle: 'Django, Flask, Python, REST',
         subtitleItalic: '5 years'
     }
 ];

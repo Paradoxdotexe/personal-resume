@@ -9,7 +9,8 @@ const WorkExperience = [
                 title: 'Senior Software Engineer',
                 tag: 'Jul 2024 — present',
                 content: `<ul>
-                    <li>Spearheaded development of new, strategic products, including DevEx and AI Impact, two of the top lead-generating products</li>
+                    <li>Architected configurable dashboards with an AI agent that builds them from plain language, now 10% of all page views</li>
+                    <li>Spearheaded AI Impact, a net-new product that became the lead offering in Jellyfish's sales motion</li>
                     <li>Pioneered a suite of agentic AI workflows that increased issue throughput over 25% across engineering</li>
                 </ul>`
             },
@@ -17,14 +18,15 @@ const WorkExperience = [
                 title: 'Software Engineer II',
                 tag: 'Jun 2023 — Jun 2024',
                 content: `<ul>
-                    <li>Expanded the capability of the core Jellyfish product and evolved foundational frontend patterns for better QoL and reusability</li>
+                    <li>Co-architected DevEx, an experimental strategic initiative that turned into a released product with its own dedicated team</li>
+                    <li>Introduced color-token theming and OpenAPI-generated types, then championed adoption and refactors across the core product</li>
                 </ul>`
             },
             {
                 title: 'Software Engineer',
                 tag: 'Jun 2022 — May 2023',
                 content: `<ul>
-                    <li>Experimented with greenfield technology, co-building a net-new product to market test a PLG motion and real-time connectivity</li>
+                    <li>Led design and frontend development of Tunic, a realtime GitHub insights app built from the ground up and launched in 8 months</li>
                 </ul>`
             }
         ]
@@ -35,8 +37,7 @@ const WorkExperience = [
         logo: './images/pallyt.jpg',
         tag: 'Feb 2021 — Jul 2022',
         content: `<ul>
-            <li>Led a 5-person dev team in the development of multiple Vue web apps with a serverless AWS backend infrastructure</li>
-            <li>Acted as chief visionary of the Pallyt platform and guided the business in branding, marketing, incorporation, and fundraising</li>
+            <li>Stewarded a 5-person team from Figma prototypes to two ecommerce web apps: a customer storefront and a vendor portal</li>
         </ul>`
     },
     {
@@ -45,9 +46,9 @@ const WorkExperience = [
         subtitle: 'Bio-CS Bridge Project',
         tag: 'Aug 2019 — May 2022',
         content: `<ul>
-            <li>Built a new platform from the ground up for disseminating a network of transdisciplinary lesson plans to high school teachers</li>
-            <li>Expanded a data exploration platform to provide dynamic selection, analysis, and visualization of 10,000 data points</li>
-            <li>Overhauled a mobile web application to refine user experience and enhance functionality for 100 monthly users</li>
+            <li>Designed and built a platform for explorable high school curricula, iterating with teachers from mockups to launch</li>
+            <li>Developed intuitive filtering and charting tools for a data platform to analyze 10,000 bumblebee observations</li>
+            <li>Redesigned a mobile web app for recording bumblebee sightings, refining its UX and features for 100 monthly users</li>
         </ul>`
     },
     // {
