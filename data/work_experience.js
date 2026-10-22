@@ -11,7 +11,7 @@ const WorkExperience = [
                 content: `<ul>
                     <li>Architected configurable dashboards with an AI agent that builds them from plain language, now 10% of all page views</li>
                     <li>Spearheaded AI Impact, a net-new product that became the lead offering in Jellyfish's sales motion</li>
-                    <li>Pioneered a suite of agentic AI workflows that increased issue throughput over 25% across engineering</li>
+                    <li>Pioneered a suite of Claude skills for agentic AI workflows, increasing issue throughput over 25% across engineering</li>
                 </ul>`
             },
             {
